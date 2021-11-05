@@ -179,6 +179,14 @@ define Device/hiwifi_hc5661a
 endef
 TARGET_DEVICES += hiwifi_hc5661a
 
+define Device/hiwifi_hc5611
+  IMAGE_SIZE := 15808k
+  DEVICE_VENDOR := HiWiFi
+  DEVICE_MODEL := HC5611
+  SUPPORTED_DEVICES += hc5611
+endef
+TARGET_DEVICES += hiwifi_hc5611
+
 define Device/hiwifi_hc5761a
   IMAGE_SIZE := 15808k
   DEVICE_VENDOR := HiWiFi
