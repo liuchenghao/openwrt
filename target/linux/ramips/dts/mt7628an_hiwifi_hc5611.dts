@@ -1,0 +1,38 @@
+#include "mt7628an_hiwifi_hc5x61a.dtsi"
+
+/ {
+	compatible = "hiwifi,hc5611", "mediatek,mt7628an-soc";
+	model = "HiWiFi hc5611";
+
+	leds {
+		compatible = "gpio-leds";
+    system {
+			label = "green:system";
+			gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;
+		};
+	};
+  gpio_export {
+		compatible = "gpio-export";
+		#size-cells = <0>;
+		power-led {
+			gpio-export,name = "power-led";
+			gpio-export,output = <1>;
+			gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+		};
+	};
+};
+
+&state_default {
+	gpio {
+		groups = "i2c", "refclk", "wdt", "wled_an";
+		function = "gpio";
+	};
+};
+
+&ehci {
+	status = "disabled";
+};
+
+&ohci {
+	status = "disabled";
+};
