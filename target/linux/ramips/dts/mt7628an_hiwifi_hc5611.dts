@@ -6,7 +6,7 @@
 
 	leds {
 		compatible = "gpio-leds";
-    system {
+    led_system: system {
 			label = "green:system";
 			gpios = <&gpio 43 GPIO_ACTIVE_HIGH>;
 		};
