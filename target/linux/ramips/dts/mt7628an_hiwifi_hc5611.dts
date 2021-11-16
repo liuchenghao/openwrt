@@ -8,7 +8,7 @@
 		compatible = "gpio-leds";
     system {
 			label = "green:system";
-			gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio 43 GPIO_ACTIVE_HIGH>;
 		};
 	};
   gpio_export {
@@ -17,7 +17,7 @@
 		power-led {
 			gpio-export,name = "power-led";
 			gpio-export,output = <1>;
-			gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 38 GPIO_ACTIVE_LOW>;
 		};
 	};
 };
